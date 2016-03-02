@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,15 +18,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        showFragment01();
     }
 
-    public void click1(View v){
+    public void showFragment01(){
         Fragment01 fragment01 = new Fragment01();
         FragmentManager fm = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.fl, fragment01);
         ft.commit();
+    }
+
+    public void click1(View v){
+        showFragment01();
     }
 
     public void click2(View v){
@@ -42,5 +47,10 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.fl,fragment03);
         ft.commit();
+    }
+
+    public void click4(View v){
+        EditText et_main = (EditText) findViewById(R.id.et_main);
+        String text = et_main.getText().toString();
     }
 }

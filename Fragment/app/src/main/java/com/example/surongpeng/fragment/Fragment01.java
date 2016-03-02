@@ -17,4 +17,8 @@ public class Fragment01 extends Fragment {
         View v = inflater.inflate(R.layout.fragment01,null);
         return v;
     }
+
+    public void setText(String text){
+
+    }
 }
