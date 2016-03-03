@@ -29,16 +29,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="click3"
-            android:text="界面1" />
+            android:text="界面3" />
         <EditText
             android:id="@+id/et_main"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
             android:text="提交"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="click4"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_fragment03"></TextView>
+
     </LinearLayout>
 
     <FrameLayout

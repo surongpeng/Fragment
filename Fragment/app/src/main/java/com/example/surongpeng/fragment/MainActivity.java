@@ -11,9 +11,11 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Fragment01 fragment01;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showFragment01(){
-        Fragment01 fragment01 = new Fragment01();
+        fragment01 = new Fragment01();
         FragmentManager fm = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.fl, fragment01);
@@ -52,5 +54,11 @@ public class MainActivity extends AppCompatActivity {
     public void click4(View v){
         EditText et_main = (EditText) findViewById(R.id.et_main);
         String text = et_main.getText().toString();
+        fragment01.setText(text);
+    }
+
+    public void setText(String text){
+        TextView tv = (TextView) findViewById(R.id.tv_fragment03);
+        tv.setText(text);
     }
 }

@@ -8,4 +8,14 @@
     android:layout_height="wrap_content"
     android:textSize="30sp"
     android:text="这是炽热的绿色"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_main"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提交"
+        android:id="@+id/bt_fragment03"/>
 </LinearLayout>
